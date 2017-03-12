@@ -9,13 +9,14 @@ package test;
 
 public class Main {
 
-    public static HelloWorldPrinter printer;
+    private static HelloWorldPrinter printer = new HelloWorldPrinter();
+    private static HelloWorldPrinterGuiForm printerGui = new HelloWorldPrinterGuiForm();
 
     public static void main(String[] args) {
-        printer = new HelloWorldPrinter();
         System.out.println("Hello World");
+
 	    printer.printHello();
-	    HelloWorldPrinterGuiForm printerGui = new HelloWorldPrinterGuiForm();
+
 	    printerGui.main();
     }
 }
