@@ -11,6 +11,9 @@ import java.awt.event.ActionListener;
 public class HelloWorldPrinterGuiForm {
     private JButton buttonPrinter;
     private JPanel panelMain;
+    private JEditorPane helloWorldEditorPane;
+    private JButton nextButton;
+    private JButton printLineButton;
 
     private HelloWorldPrinter printer = new HelloWorldPrinter();
 
@@ -19,6 +22,13 @@ public class HelloWorldPrinterGuiForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null, printer.getHello());
+            }
+        });
+
+        printLineButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                helloWorldEditorPane.setText(helloWorldEditorPane.getText() + "\nHello World!");
             }
         });
     }
